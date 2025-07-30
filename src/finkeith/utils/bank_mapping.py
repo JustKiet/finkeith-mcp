@@ -3,6 +3,7 @@ from finkeith.core.common.banks import SupportedBank
 bank_mapping = {
     "MB Bank": SupportedBank.MBBANK,
     "MBBANK": SupportedBank.MBBANK,
+    "MBBank": SupportedBank.MBBANK,
     "Military Commercial Joint Stock Bank": SupportedBank.MBBANK,
     # Add more banks here as you support them
 }

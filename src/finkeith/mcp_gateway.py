@@ -40,7 +40,7 @@ async def get_transaction_history(
     date_to: Optional[Date] = None,
     amount_in: Optional[float] = None,
     amount_out: Optional[float] = None,
-    limit: Optional[int] = None,
+    limit: Optional[int] = 20,
 ) -> SuccessResponse[TransactionHistoryResponse]:
     """
     Get transaction history for a specific account.

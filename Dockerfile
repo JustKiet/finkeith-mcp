@@ -26,4 +26,4 @@ COPY . .
 # Expose port for FastAPI
 EXPOSE 10000
 
-CMD ["uvicorn", "finkeith.main:app", "--host", "0.0.0.0", "--port", "10000"]
+CMD ["uvicorn", "finkeith.main:app", "--host", "0.0.0.0", "--port", "10000", "--reload"]
