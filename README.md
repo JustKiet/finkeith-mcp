@@ -1,16 +1,6 @@
 # FinKEITH MCP Finance API 🏦
 
-A production-grade REST API for finance operations built with FastAPI, featuring comprehensive transaction management, account balance checking, secure API key authentication and MCP integration
-
-## 🚀 Features
-
-- **🔒 Secure Authentication**: API key-based authentication
-- **📊 Comprehensive Banking**: Full transaction and account management
-- **⚡ High Performance**: Async/await throughout for optimal performance  
-- **📝 Well Documented**: Complete OpenAPI/Swagger documentation
-- **🛡️ Production Ready**: Robust error handling and validation
-- **✅ Fully Tested**: Comprehensive test suite with 100% endpoint coverage
-- **🏗️ Clean Architecture**: DTO-based client with domain service layer
+An MCP Server for finance operations built with FastAPI, featuring comprehensive transaction management and account balance checking.
 
 ## 🏗️ Architecture
 
@@ -24,7 +14,7 @@ A production-grade REST API for finance operations built with FastAPI, featuring
 
 ### Core Components
 
-- **🔌 Clients**: External API integrations (SePay banking client)
+- **🔌 Clients**: External API integrations (curently using SePay APIs)
 - **📋 DTOs**: Data Transfer Objects for API communication
 - **🏢 Services**: Business logic layer converting DTOs to domain entities
 - **🌐 API**: FastAPI endpoints with Pydantic validation
@@ -204,14 +194,6 @@ uv run pytest tests/test_api.py -v
 uv run pytest tests/test_api.py::TestBankingAPI::test_transaction_history_success -v
 ```
 
-### Test Coverage
-
-- ✅ **API Endpoints**: All routes tested
-- ✅ **Error Handling**: Validation and service errors
-- ✅ **Authentication**: API key validation
-- ✅ **Data Validation**: Pydantic schema validation
-- ✅ **Business Logic**: Service layer functionality
-
 ## 🔧 Configuration
 
 ### Environment Variables
@@ -227,25 +209,6 @@ uv run pytest tests/test_api.py::TestBankingAPI::test_transaction_history_succes
 - **Port**: `10000`
 - **CORS**: Enabled for development
 - **Docs**: Available at `/docs` and `/redoc`
-
-## 🛡️ Production Deployment
-
-### Security Considerations
-
-1. **API Key Security**: Store `SEPAY_API_KEY` securely
-2. **CORS Configuration**: Restrict origins for production
-3. **Rate Limiting**: Consider adding rate limiting middleware
-4. **SSL/TLS**: Use HTTPS in production
-5. **Input Validation**: All requests validated with Pydantic
-
-### Production Checklist
-
-- [ ] Set `SEPAY_API_KEY` environment variable
-- [ ] Configure proper CORS origins
-- [ ] Set up SSL/TLS certificates
-- [ ] Configure logging and monitoring
-- [ ] Set up health check endpoints for load balancers
-- [ ] Consider adding rate limiting and authentication middleware
 
 ## 📚 Schema Validation
 
@@ -277,7 +240,3 @@ uv run pytest tests/test_api.py::TestBankingAPI::test_transaction_history_succes
 ## 📄 License
 
 MIT License - see LICENSE file for details.
-
----
-
-**🏦 FinKeith MCP Finance API** - Production-ready banking integration made simple.
